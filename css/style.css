@@ -40,7 +40,7 @@
     transform: translateY(100px);
 }
 
-.stories .card-date{
+.card-date{
     opacity: 0;
     transform: translateX(-100px);
 }
@@ -48,6 +48,30 @@
     opacity: 0;
     transform: translateY(100px);
 }
+.main-div .title{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.main-div p{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+
+.main-div .category-header{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.press-releases .image-container,
+.swiper-gallery .image-container,
+.reports-and-insights div{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
 @font-face {
     src: url('../fonts/FormaDJRMicro-Regular-Testing.woff2') format("woff2"),
         url('../fonts/FormaDJRMicro-Regular-Testing.woff') format("woff");
