@@ -953,7 +953,7 @@
    
     
      const tl = gsap.timeline({delay:0.2})
-
+     tl.to(".breadcrumb-item",{x:0, opacity:1,stagger:0.1})
       
 
      ScrollTrigger.batch(".card-title", {
@@ -966,7 +966,27 @@
        },
      });
 
-      tl.to(".breadcrumb-item",{x:0, opacity:1,stagger:0.1})
+    //  ScrollTrigger.batch(".report", {
+    //    once: true,
+    //    start: "top 80%",
+       
+    //    onEnter: (element, triggers) => {
+    //      gsap.to(element,{y:0, opacity:1, stagger:0.2, delay:0});
+        
+    //    },
+    //  });
+
+    //  ScrollTrigger.batch(".insight", {
+    //    once: true,
+    //    start: "top 80%",
+       
+    //    onEnter: (element, triggers) => {
+    //      gsap.to(element,{y:0, opacity:1, stagger:0.2, delay:0});
+        
+    //    },
+    //  });
+
+      
       const lenis = new Lenis()
  
  lenis.on('scroll', (e) => {

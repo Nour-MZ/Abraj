@@ -527,6 +527,45 @@
        },
      });
 
+     ScrollTrigger.batch(".print", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger: 0.2,delay:0.5,duration: 0.3});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".share", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{ x:0, opacity:1, stagger: 0.2, delay:0.3, duration: 0.3});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".card-category", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{ x:0, opacity:1, stagger: 0.2, delay:0.3, duration: 0.3});
+        
+       },
+     });
+     ScrollTrigger.batch(".section-title", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger:0.2});
+        
+       },
+     });
+
     //  const ttl = gsap.timeline({
     //    scrollTrigger: {
     //      trigger: "#grid", // element to trigger animation

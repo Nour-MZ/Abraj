@@ -1034,6 +1034,36 @@
         
        },
      });
+
+     ScrollTrigger.batch(".nb-of-items", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger:0.15});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".layout", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, delay:0.3});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".sort-type", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1,});
+        
+       },
+     });
     
     // mainimages = $("#grid .masonry-image")
     

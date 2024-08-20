@@ -662,6 +662,15 @@
         
        },
      });
+
+     ScrollTrigger.batch(".news .card-date", {
+       once: true,
+       onEnter: (element, triggers) => {
+
+         gsap.to(element, { x:0, opacity:1, stagger: 0.1 });
+        
+       },
+     });
      const lenis = new Lenis()
  
          lenis.on('scroll', (e) => {

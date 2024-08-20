@@ -927,7 +927,25 @@
     
 
     
-  
+    ScrollTrigger.batch(".section-title", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger:0.2});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".view-all", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger:0.2});
+        
+       },
+     });
 
     ScrollTrigger.batch(".press-releases .image-container", {
        once: true,
@@ -977,8 +995,34 @@
         
        },
      });
-  
-    
+     ScrollTrigger.batch(".stay-updated .title", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{x:0, opacity:1, stagger:0.2});
+        
+       },
+     });
+     ScrollTrigger.batch(".stay-updated .description", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{y:0, opacity:1, stagger:0.2});
+        
+       },
+     });
+
+     ScrollTrigger.batch(".stay-updated .subscription-form", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{y:0, opacity:1, stagger:0.2});
+        
+       },
+     });
 
     
    

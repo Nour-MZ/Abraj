@@ -70,6 +70,54 @@
     opacity: 0;
     transform: translateY(100px);
 }
+.news .card-date{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+.nb-of-items{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.layout,
+.sort-type{
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.section-title{
+    opacity:0;
+    transform: translateX(-100px);
+}
+
+.view-all{
+    opacity:0;
+    transform: translateX(-100px);
+}
+
+.stay-updated .title{
+    opacity:0;
+    transform: translateX(-100px);
+}
+.stay-updated .description,
+.stay-updated .subscription-form{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.print,
+.share{
+    opacity:0;
+    transform: translateX(-100px);
+}
+
+.card-category{
+    opacity:0;
+    transform: translateX(-100px);
+}
+
+
+
 
 
 @font-face {
