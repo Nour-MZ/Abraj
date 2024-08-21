@@ -25,16 +25,9 @@ var iso= new Isotope(grid,{
 imagesLoaded( grid ).on( 'progress', function() {
   // layout Isotope after each image loads
   iso.layout();
-  AOS.init({
-    once:true,
-  })
+  
 });
-}else{
-  AOS.init({
-    once:true,
-  })
 }
-
 //Change the navbar color when scrolling down
 window.addEventListener('scroll', function () {
   //Change the navbar color when scrolling down
@@ -141,10 +134,6 @@ mediaFilterBtns.forEach(function(button) {
             btn.classList.remove('active');
         });
         this.classList.add('active');
-      //Disable AOS in order not to make an animation conflict
-       AOS.init({
-        disable: true
-      });
       if(grid){
       filter()
       }
@@ -162,10 +151,7 @@ categoryBtns.forEach(category=>{
             category.classList.remove('active');
         })
         category.classList.add('active');
-           //Disable AOS in order to not make any animation conflict
-           AOS.init({
-            disable: true
-          });
+           
           if(grid){
             filter()
           }
@@ -195,9 +181,7 @@ topicCheckboxes.forEach(checkbox => {
         });
         checkboxFilter = filters.join(', ');      
   
-      AOS.init({
-       disable: true
-      });
+      
       if(grid){
         filter();
       }
@@ -267,9 +251,7 @@ dropdownItems.forEach(function(item) {
       }
     });
     const sortValue = item.getAttribute('data-sort');
-    AOS.init({
-        disable:true
-    })
+   
     if(grid){
     if(sortValue === 'desc'){
         iso.arrange({sortBy:'date',sortAscending:false})
@@ -299,9 +281,7 @@ layouts.forEach(layout=>{
             iso.options.layoutMode="masonry"
             document.querySelector('#grid').classList.remove('flex')
         }
-        AOS.init({
-            disable:true
-        })
+        
         //fix the layout for the items 
         iso.layout();
     })
@@ -315,9 +295,7 @@ quicksearch.addEventListener('keyup', debounce(function() {
 // g stands for "global" and is used to search for all occurrences of the pattern in the input string, not just the first one.
 // i stands for "ignore case" and makes the pattern case-insensitive, so it will match both uppercase and lowercase letters.
   qsRegex = new RegExp(quicksearch.value, 'gi'); 
-  AOS.init({
-    disable:true
-   })
+  
    if(grid){
      filter();
    }
@@ -364,9 +342,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const allCheckboxLabel =allCheckbox.nextElementSibling;
     allCheckboxLabel.querySelector('span').innerHTML=`(${items.length.toString()})`;
 
-    //add AOS-delay dynamically to the images
+ 
     items.forEach(function(img,i){
-      img.setAttribute('data-aos-delay',i*50)
+      
       //show and open the popup slider
       img.addEventListener('click',function(){
         popupSlider.classList.add('show');

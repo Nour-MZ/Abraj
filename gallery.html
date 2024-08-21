@@ -8,7 +8,7 @@
 </head>
 <link rel="icon" href="media/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/aos.css">
+
 <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="css/style.css">
 <body>
@@ -994,7 +994,7 @@
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
-   <script src="js/aos.js"></script>
+
    <script src="js/isotope.pkgd.min.js"></script>
    <script src="js/imagesloaded.pkgd.min.js"></script>
    <script src="js/swiper-bundle.min.js"></script>
@@ -1065,43 +1065,15 @@
        },
      });
     
-    // mainimages = $("#grid .masonry-image")
-    
-    // tl.fromTo(mainimages, {
-    //   y: 200, // starting position
-    //   opacity: 0, // starting opacity
-    // }, {
-    //   y: 0, // ending position
-    //   opacity: 1, // ending opacity
-    //   duration: 1, // animation duration
-    //   stagger: 0.2, // stagger between elements
-    //   ease: "power2.inOut", // easing function
-    // });
-
-
-    // const nexttl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".swiper-gallery", // element to trigger animation
-    //     start: "top bottom", // start animation when element reaches center of viewport
-    //     end: "bottom center", // end animation when element reaches bottom of viewport
-    //     // scrub: true, // enable scrubbing (animation follows scroll position)
-    //   },
-    // });
-
-    
-    // mainimages = $(".swiper-gallery .image-container")
-    
-    // tl.fromTo(mainimages, {
-    //   y: 400, // starting position
-    //   opacity: 0, // starting opacity
-    // }, {
-    //   y: 0, // ending position
-    //   opacity: 1, // ending opacity
-    //   duration: 1, // animation duration
-    //   stagger: 0.3, // stagger between elements
-    //   ease: "power2.inOut", // easing function
-    // });
-
+     ScrollTrigger.batch(".card-category", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{ x:0, opacity:1, stagger: 0.2, delay:0.3, duration: 0.3});
+        
+       },
+     });
     ScrollTrigger.batch(".masonry-image", {
       once: true,
       onEnter: (elements, triggers) => {

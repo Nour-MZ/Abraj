@@ -6,7 +6,7 @@
     <title>Home - Abraj</title>
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/aos.css">
+
 <link rel="stylesheet" href="css/swiper-bundle.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
@@ -901,13 +901,13 @@
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
-   <script src="js/aos.js"></script>
+
    <script src="js/imagesloaded.pkgd.min.js"></script>
    <script src="js/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script> 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-   <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+  
     
    <script>
     // import { gsap } from "gsap";
@@ -1027,16 +1027,15 @@
     
    
 
-    // ScrollTrigger.batch(".image-container", {
-    //   onEnter: (elements, triggers) => {
-    //     gsap.to(elements, { opacity: 1, stagger: 0.15 });
-    //     console.log(elements.length, "elements entered");
-    //   },
-    //   onLeave: (elements, triggers) => {
-    //     gsap.to(elements, { opacity: 0, stagger: 0.15 });
-    //     console.log(elements.length, "elements left");
-    //   },
-    // });
+     ScrollTrigger.batch(".card-category", {
+       once: true,
+       start: "top 80%",
+       
+       onEnter: (element, triggers) => {
+         gsap.to(element,{ x:0, opacity:1, stagger: 0.2, delay:0.3, duration: 0.3});
+        
+       },
+     });
     const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
